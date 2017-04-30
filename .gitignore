@@ -4,8 +4,10 @@
 #log files
 *.log
 
-#latex compiled
-*.pdf
+#latex compiled except pdf
 *.aux
 *.dvi
 *.toc
+
+#minted files
+_minted-*
