@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+        % This might change to a better example in the future, but for now it's
+        % something from an old paper that probably wasn't that good
+
+\bibitem{blockandtrack}
+T.~Kozawa, H.~Horino, T.~Ishiga, J.~Sakemi, and S.~Sato.
+\newblock Block and track method for automated layout generation of mos/lsi
+  arrays.
+\newblock {\em Proc. Int. Solid State Circuits Con}, pages 62--63, 1972.
+
+\bibitem{trimberger1993}
+Stephen Trimberger.
+\newblock A reprogrammable gate array and applications.
+\newblock {\em PROCEEDINGS OF THE IEEE. VOL. 81, NO. 7}, pages 1030--1041,
+  1993.
+
+\bibitem{alexander1996}
+Michael~J. Alexander and Gabriel Robins.
+\newblock New performance-driven fpga routing algorithms.
+\newblock {\em IEEE TRANSACTIONS ON COMPUTER-AIDED DESIGN OF INTEGRATED
+  CIRCUITS AND SYSTEMS, VOL. 15, NO. 12}, pages 1505--1517, 1996.
+
+\end{thebibliography}

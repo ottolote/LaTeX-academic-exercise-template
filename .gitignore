@@ -1,0 +1,11 @@
+# vim swapfiles
+*.swp\*.swo
+
+#log files
+*.log
+
+#latex compiled
+*.pdf
+*.aux
+*.dvi
+*.toc
