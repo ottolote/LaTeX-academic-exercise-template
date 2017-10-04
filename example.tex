@@ -11,6 +11,11 @@
 \usepackage{float}    % for more accurate graphics placement
 \usepackage{fancyhdr} % for top header
 
+% references
+\usepackage{hyperref} % needed by cleveref, also provides clickable links
+\usepackage{cleveref} % needed by autonum
+\usepackage{autonum} % only add numbers to referenced equations
+
 % formatting
 \usepackage{enumitem} % provides easy change of labels in enumerate environment
 \usepackage[top=3cm, bottom=4cm, width=17cm]{geometry} % for smaller page margins
@@ -23,8 +28,8 @@
 % uncomment the following after you have completed the required installation
 % see https://github.com/gpoore/minted for info
 
-%\usepackage{minted} 
-%\definecolor{codeBgColor}{RGB}{240,240,240}
+\usepackage{minted} 
+\definecolor{codeBgColor}{RGB}{240,240,240}
 
 
 
@@ -50,30 +55,27 @@
 \ex{Exercise 3-11}
 
 \begin{enumerate}[label=\alph*)]
-    \item{
-            \begin{enumerate}[label=\arabic*]
-            \item{ 
-                You can easily nest enumerate environments.
-            }
-
-            \item{
-                The default enumeration labels can be changed easily if you 
-                    don't like them. 
-            }
-        \end{enumerate}
-    }
+  \item You can nest enumerate environments like below
+  \item
+    \begin{enumerate}[start = 2, label=\arabic*)]
+      \item Since we're using the \texttt{enumitem} package, the start of an
+        enumeration can easily be changed.
+        \setcounter{enumii}{4} % enumii for first nested counter, enumi for root counter
+      \item and points can be skipped by using \texttt{\\setcounter}
+    \end{enumerate}
 \end{enumerate}
 
 
 
 \ex{Exercise 3-14}
 
-\begin{enumerate}[label=\Alph*)] % \alph for small letters, google the rest
-    \item Like this
-
-    \item Notice how the item doesn't need brackets, but anything more than one 
-        line not in a bracket might be confusing
-
+\begin{enumerate}[label=\Alph*)] % google is your friend for label variations
+  \item you can put most things into items, but when adding large sections you
+    might want to use brackets to surround your item
+%  \item{
+%   LIKE 
+%   THIS
+%    }
 \end{enumerate}
 
 
@@ -82,31 +84,30 @@
 
 \begin{enumerate}
     \item{
-            Code syntax highlight example, commented out by default due to 
-            plugin installation requirements. See the minted documentation on
-            https://github.com/gpoore/minted for install instructions. You're
-            free to uncomment and try now, but it won't work without the correct
-            python modules.
+            Code syntax highlight example. See the minted documentation on
+            https://github.com/gpoore/minted for plugin install instructions.
+            Syntax highlighting won't work without the correct python modules.
+
+% UNCOMMENT THIS ONLY IF YOU HAVE PYGMENTIZE INSTALLED
+%
+            % change c++ below to whatever language you want, supports most
+            \begin{minted}
+                [
+                    linenos,                % line numbers
+                    bgcolor=codeBgColor     % background color, remove for none
+                ]
+                {c++} 
+#include<iostream>
+
+using namespace std;
+
+int main() {
+    cout << "Look how nice code looks in latex" << endl;
+}
+            \end{minted}
 
 
-%            % change c++ below to whatever language you want, supports most
-%            \begin{minted}
-%                [
-%                    linenos,                % line numbers
-%                    bgcolor=codeBgColor     % background color, remove for none
-%                ]
-%                {c++} 
-%#include<iostream>
-%
-%using namespace std;
-%
-%int main() {
-%    cout << "Look how nice code looks in latex" << endl;
-%}
-%            \end{minted}
-%
-%
-%    }
+    }
 
 \end{enumerate}
 
