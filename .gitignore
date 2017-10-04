@@ -1,5 +1,9 @@
+# template.pdf
+template.pdf
+
 # vim swapfiles
-*.swp\*.swo
+*.swp
+*.swo
 
 #log files
 *.log
@@ -8,6 +12,7 @@
 *.aux
 *.dvi
 *.toc
+*.out
 
 #minted files
 _minted-*
